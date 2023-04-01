@@ -1,0 +1,16 @@
+name: t1-CPA
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pillow
+  - ca-certificates
+  - certifi
+  - pandas
+  - selenium
+  - bs4
+  - tqdm
+  - requests
+  - conda-forge::webdriver-manager=3.8.5
+  - html5lib
