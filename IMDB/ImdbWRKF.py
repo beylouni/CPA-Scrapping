@@ -35,6 +35,6 @@ class ImdbWRKF:
 
         print('Exporting to json')
         df.to_json('IMDB/imbd.json', force_ascii=False,
-                   orient='records', indent=4, lines=True)
+                   orient='records', indent=4)
         driver.quit()
         print("All Done...")
