@@ -108,4 +108,4 @@ class Countries:
         df = pd.read_csv('Countries/data.csv', sep=',')
         df.loc[idx] = dici
 
-        df.to_csv('Countries/data.csv', sep=',')
+        df.to_csv('Countries/data.csv', sep=',', index=False)

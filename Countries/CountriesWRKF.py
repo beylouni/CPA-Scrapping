@@ -41,8 +41,12 @@ class CountriesWRKF:
                 new_html = countries_class.download(new_country_url)
                 new_html = BeautifulSoup(new_html, 'html5lib')
                 name_country = countries_class.find_name(new_country_url)
-                with open(f'Countries/HTML/{name_country}.html', 'r') as f:
-                    current_html = BeautifulSoup(f.read(), 'html5lib')
+                try:
+                    with open(f'Countries/HTML/{name_country}.html', 'r') as f:
+                        current_html = BeautifulSoup(f.read(), 'html5lib')
+                except:
+                    print(f'File {name_country}.html Not Found')
+                    continue
 
                 if new_html != current_html:
                     print('Changes detected...\n')
