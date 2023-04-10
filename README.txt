@@ -2,7 +2,7 @@
 
 ## Integrantes:
     * João Vitor Abitante - 21102407
-    * Luciano Farias - 
+    * Luciano Farias - 22180074
     * Eduardo Xavier - 19103394
     * Alice Ferreira
 
