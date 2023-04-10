@@ -6,13 +6,12 @@ import pandas as pd
 class CountriesWRKF:
 
     def run(self):
-
+        """ Executa o crawler e salva o CSV com os dados dos paises. """
         countries_class = Countries()
         sitemap_list = countries_class.get_sitemap()
 
         dici_list = []
         for country_url in sitemap_list:
-
             html = countries_class.download(country_url)
             countries_class.soup = BeautifulSoup(html, 'html5lib')
 
@@ -30,7 +29,8 @@ class CountriesWRKF:
         print('All Done')
 
     def crawler(self):
-
+        """ Verfica se houve alterações nos dados dos paises e atualiza o CSV e o HTML se houver.
+            Itera infinatamente ate o usuario decidir parar. """
         countries_class = Countries()
         new_sitemap_list = countries_class.get_sitemap()
         choice = None
